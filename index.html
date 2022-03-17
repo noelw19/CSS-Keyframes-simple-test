@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Learner Example</title>
+</head>
+<body>
+    <h2>Learn CSS Keyframes</h2>
+    <div class="parent">
+        <div class="firstChild textCenter">
+            <div class="animationContainer">
+                <p class="text1">This is first child.</p>
+            </div>
+            <div class="buttons">
+                <button class="spin">Spin</button>
+                <button class="leftToRight">Left to Right</button>
+                <button class="topToBottom">Top to Bottom</button>
+            </div>
+            <div class="alt" >
+                <p>Click to alternate the animation direction</p>
+                <code>animation-direction: alternate;</code>
+                <button class="alternate firstAlt" id="firstAlt">Alternate</button>
+            </div>
+            <div class="img1"></div>
+        </div>
+        <div class="secondChild textCenter">
+            <div class="animationContainer">
+                <p class="text2">This is second child.</p>
+            </div>
+            <div class="buttons">
+                <button class="fadeIn">Fade In</button>
+                <button class="driveIn">Drive in</button>
+                <button class="growIn">Grow in</button>
+            </div>
+            <div class="alt" >
+                <p>Click to alternate the animation direction</p>
+                <code>animation-direction: alternate;</code>
+                <button class="alternate secondAlt" >Alternate</button>
+            </div>
+            <div class="img2"></div>
+        </div>
+    </div>
+    <div class="explainContainer">
+        <p>How to add the animation to an element.</p>
+        <div class="initiateExplainer">
+            <p>Use the animation key word, add the name of the animation first and the duration amount. <br/><br/>
+                Use infinite if you would like animation to loop.</p>  
+            <img src="./imgs/animateInitiate.png" alt="How to connect animation to element">
+
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

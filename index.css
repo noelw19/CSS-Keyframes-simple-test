@@ -1,0 +1,203 @@
+body {
+    background: orange;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+h2 {
+    width: 90vw;
+    text-align: center;
+}
+
+.parent {
+    width: 100%;
+    height: auto;
+    background: red;
+    display: flex;
+}
+
+
+.firstChild {
+    width: 50%;
+    height: auto;
+    background: white;
+    overflow: hidden;
+}
+
+.secondChild {
+    width: 50%;
+    height: auto;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+.animationContainer {
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.text1 {
+    animation: Spin 3s infinite;
+}
+
+.text2 {
+    animation: FadeIn 5s infinite;
+}
+
+.img1, .img2 {
+    margin: 1rem;
+}
+
+.img1 > img, .img2 > img {
+    width: 70%;
+    border: orange solid 5px;
+    margin: 1rem;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.explainContainer {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.explainContainer > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.initiateExplainer {
+    display: flex;
+    padding: 10px;
+}
+
+.initiateExplainer > p {
+    width: 40%;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.alt {
+    display: flex;
+    flex-direction: column;
+    background: orange;
+    margin: 10px;
+    color: black;
+}
+
+.alternate {
+    width: 30%;
+    align-self: center;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    .secondChild {
+        border-top: 5px solid orange;
+    }
+
+    .firstChild, .secondChild {
+        width: 100%;
+    }
+
+    .initiateExplainer {
+        
+        flex-direction: column;
+    }
+
+    .initiateExplainer > p {
+        width: 90%;
+    }
+
+    .initiateExplainer > img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@keyframes Spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes TopToBottom {
+    from {
+        transform: translateY(-20vh);
+    }
+
+    to {
+        transform: translateY(60vh);
+    }
+}
+
+@keyframes LeftToRight {
+    from {
+        transform: translateX(-30vw);
+    }
+
+    to {
+        transform: translateX(30vw);
+    }
+}
+
+@keyframes DriveIn {
+    0% {
+        transform: translateX(-30vw);
+    }
+    
+    30% {
+        transform: translateX(15%);
+    }
+    35%, 100% {
+        transform: translateX(0%);
+    }
+}
+
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes GrowIn {
+    0% {
+        font-size: 0px;
+    }
+
+    50% {
+        font-size: 1.8rem;
+    }
+
+    55%, 100% {
+        font-size: 1.2rem;
+    }
+}
